@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="144.76102"
+   height="60"
+   viewBox="0 0 38.301351 15.875001"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="fipu-calendar-logo.svg"
+   inkscape:version="1.0.2 (1.0.2+r75+1)">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.7700899"
+     inkscape:cx="90.495394"
+     inkscape:cy="47.508545"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1366"
+     inkscape:window-height="704"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-85.964554,-140.06444)">
+    <circle
+       style="fill:#ffffff;stroke:#2158c2;stroke-width:0.341605;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path833"
+       cx="93.902054"
+       cy="148.00194"
+       r="7.7666974" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.82083px;line-height:1.25;font-family:'Albert Sans';-inkscape-font-specification:'Albert Sans';letter-spacing:0.28575px;word-spacing:0px;fill:#2158c2;fill-opacity:1;stroke-width:0.264583"
+       x="87.0812"
+       y="150.01886"
+       id="text1573"><tspan
+         sodipodi:role="line"
+         id="tspan1571"
+         x="87.0812"
+         y="150.01886"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:5.82083px;font-family:'Albert Sans';-inkscape-font-specification:'Albert Sans Semi-Bold';fill:#2158c2;fill-opacity:1;stroke-width:0.264583">FIPU</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.7625px;line-height:1.25;font-family:'Albert Sans';-inkscape-font-specification:'Albert Sans';letter-spacing:0.277812px;word-spacing:0px;stroke-width:0.264583"
+       x="102.71758"
+       y="149.69977"
+       id="text1577"><tspan
+         sodipodi:role="line"
+         id="tspan1575"
+         x="102.71758"
+         y="149.69977"
+         style="font-size:4.7625px;fill:#2158c2;fill-opacity:1;stroke-width:0.264583">Calendar</tspan></text>
+  </g>
+</svg>
