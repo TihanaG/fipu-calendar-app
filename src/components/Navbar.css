@@ -1,0 +1,10 @@
+.navbar {
+    background-color: #D9DADD;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* position: fixed; */ /* isprobati kasnije */
+    width: 100%;
+    padding-right: 50px;
+}

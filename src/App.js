@@ -23,7 +23,10 @@ function App() {
               <Route path='/multi-date-picker' element={<MultiDatePicker />} />
               <Route path='/reports' element={<Reports />} />
               <Route path='/profile' element={<Profile />} />
-              <Route path='login' element={<Login setUser={setUser} />} />
+            </Route>
+          </Routes>
+          <Routes>
+          <Route path='/login' element={<Login setUser={setUser} />} />
               <Route path='dashboard'
                 element={
                   <ProtectedRoute user={user}>
@@ -33,7 +36,6 @@ function App() {
                 }
               />
               <Route path='*' element={<Error />} />
-            </Route>
           </Routes>
       </Router>
     </>

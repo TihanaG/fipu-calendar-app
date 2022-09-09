@@ -11,9 +11,11 @@
 .multi-date-picker,
 .reports,
 .profile {
+  margin-left: 300px;
   display: flex;
   height: 90vh;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  font-size: 1.5rem;
+  background-color: gray;
 }
