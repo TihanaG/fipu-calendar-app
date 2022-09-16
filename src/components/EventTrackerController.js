@@ -5,8 +5,9 @@ import { useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { Modal } from './Modal'
 import { NewEventForm } from './NewEventForm'
+import { EventCell } from './EventCell';
 
-export const CalendarController = () => {
+export const EventTrackerController = () => {
     const [events, setEvents] = useState([])
     const [showNewEventsModal, setShowNewEventsModal] = useState(false) //hidden
     const [selectedDate, setSelectedDate] = useState(null)
@@ -67,7 +68,8 @@ export const CalendarController = () => {
             month={currentMonthMoment.format('MM')}
             year={currentMonthMoment.format('YYYY')}
             onPrev={decrementMonth}
-            onNext={incrementMonth} />
+            onNext={incrementMonth}
+            cellComponent={EventCell} />
         </>
     )
 }

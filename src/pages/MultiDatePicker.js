@@ -1,9 +1,10 @@
 import React from 'react'
+import { DatePickerController } from '../components/DatePickerController'
 
 function MultiDatePicker() {
   return (
     <div className='multi-date-picker'>
-      <h1>MultiDatePicker</h1>
+      <DatePickerController />
     </div>
   )
 }

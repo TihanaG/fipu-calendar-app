@@ -1,10 +1,10 @@
 import React from 'react'
-import { CalendarController } from '../components/CalendarController'
+import { EventTrackerController } from '../components/EventTrackerController'
 
 function Home() {
     return (
         <div className='home'>
-            <CalendarController />
+            <EventTrackerController />
         </div>
     )
 }

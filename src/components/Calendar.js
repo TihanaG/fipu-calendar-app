@@ -2,7 +2,6 @@ import moment from 'moment'
 import React from 'react'
 import { getDaysInMonth, segmentIntoWeeks, padWeekFront, padWeekBack, daysOfTheWeek } from '../util'
 import styled from 'styled-components'
-import { CalendarCell } from './CalendarCell';
 
 const CalendarControlsWrap = styled.div`
     height: 15%;
@@ -54,7 +53,15 @@ const CalendarCellWrap = styled.div`
 `;
 
 // month, year instead currentMonthMoment kako bi bilo reusable
-export const Calendar = ({ onCellClicked, month, year, onPrev, onNext, getCellProps }) => {
+export const Calendar = ({
+    onCellClicked,
+    month,
+    year,
+    onPrev,
+    onNext,
+    getCellProps,
+    cellComponent: CellComponent 
+}) => {
     const currentMonthMoment = moment(`${month}${year}`, 'MMYYYY')
 
     const weeks = segmentIntoWeeks(getDaysInMonth(currentMonthMoment))
@@ -91,8 +98,8 @@ export const Calendar = ({ onCellClicked, month, year, onPrev, onNext, getCellPr
                                     dayMoment.format('YYYY')
                                     )}>
                                         {dayMoment
-                                            ? <CalendarCell dateNumber={dayMoment.format('D')} {...getCellProps(dayMoment)} key={dayMoment.format('D')} />
-                                            : <CalendarCell key={`${i}${j}`} />}
+                                            ? <CellComponent dateNumber={dayMoment.format('D')} {...getCellProps(dayMoment)} key={dayMoment.format('D')} />
+                                            : <CellComponent key={`${i}${j}`} />}
                                     </CalendarCellWrap>
                                 )
                             })}
