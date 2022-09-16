@@ -1,13 +1,12 @@
 import React from 'react'
-import Calendar from '../components/Calendar'
+import { CalendarController } from '../components/CalendarController'
 
 function Home() {
-  return (
-    <div className='home'> 
-      <h1>Home</h1>
-      <Calendar />
-    </div>
-  )
+    return (
+        <div className='home'>
+            <CalendarController />
+        </div>
+    )
 }
 
 export default Home
