@@ -11,6 +11,28 @@ export const getDaysInMonth = monthMoment => {
     return days
 }
 
+/* Za dane iz proslog/sljedeceg mjeseca */
+export const getDaysForWeeksInMonth = monthMoment => {
+    const firstDayInMonth = monthMoment.clone().startOf('month')
+    const mondayBeforeMonth = firstDayInMonth.clone().startOf('isoWeek')
+    
+    const lastDayInMonth = monthMoment.clone().endOf('month')
+    const mondayAfterMonth = lastDayInMonth.clone()
+        .endOf('isoWeek')
+        .add(1, 'days')
+        .startOf('day')
+    
+    const currentDay = mondayBeforeMonth.clone()
+    let days = []
+    
+    while(!currentDay.isSame(mondayAfterMonth, 'date')) {
+        days.push(currentDay.clone())
+        currentDay.add(1, 'days')
+    }
+
+    return days;
+}
+
 export const segmentIntoWeeks = dayMoments => {
     let weeks = []
     let currentWeek = []

@@ -1,6 +1,6 @@
 import moment from 'moment'
 import React from 'react'
-import { getDaysInMonth, segmentIntoWeeks, padWeekFront, padWeekBack, daysOfTheWeek } from '../util'
+import { getDaysForWeeksInMonth, segmentIntoWeeks, daysOfTheWeek } from '../util'
 import styled from 'styled-components'
 
 const CalendarControlsWrap = styled.div`
@@ -64,7 +64,7 @@ export const Calendar = ({
 }) => {
     const currentMonthMoment = moment(`${month}${year}`, 'MMYYYY')
 
-    const weeks = segmentIntoWeeks(getDaysInMonth(currentMonthMoment))
+    const weeks = segmentIntoWeeks(getDaysForWeeksInMonth(currentMonthMoment))
 
     return (
         <>
@@ -82,24 +82,26 @@ export const Calendar = ({
                     {daysOfTheWeek.map(day => <CalendarHeadingCell key={day}>{day}</CalendarHeadingCell>)}
                 </CalendarHeading>
                 {weeks.map((week, i) => {
-                    const displayWeek = i === 0
-                        ? padWeekFront(week)
-                        : i === weeks.length - 1
-                            ? padWeekBack(week)
-                            : week
-
                     return (
                         <CalendarRow key={i}>
-                            {displayWeek.map((dayMoment, j) => {
+                            {week.map((dayMoment, j) => {
                                 return (
-                                    <CalendarCellWrap onClick={() => onCellClicked(
-                                    dayMoment.format('DD'),
-                                    dayMoment.format('MM'),
-                                    dayMoment.format('YYYY')
-                                    )}>
-                                        {dayMoment
-                                            ? <CellComponent dateNumber={dayMoment.format('D')} {...getCellProps(dayMoment)} key={dayMoment.format('D')} />
-                                            : <CellComponent key={`${i}${j}`} />}
+                                    <CalendarCellWrap
+                                        key={dayMoment.format('DD/MM/YYYY')}
+                                        onClick={() => onCellClicked(
+                                            dayMoment.format('DD'),
+                                            dayMoment.format('MM'),
+                                            dayMoment.format('YYYY')
+                                        )}
+                                    >
+                                        <CellComponent
+                                            dateNumber={dayMoment.format('D')}
+                                            isInCurrentMonth={dayMoment.isSame(currentMonthMoment, 'month')}
+                                            {...getCellProps(
+                                                dayMoment.format('DD'),
+                                                dayMoment.format('MM'),
+                                                dayMoment.format('YYYY')
+                                            )} />
                                     </CalendarCellWrap>
                                 )
                             })}
